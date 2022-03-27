@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { HashLocationStrategy, LocationStrategy,PathLocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
