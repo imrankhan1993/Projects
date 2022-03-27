@@ -1,0 +1,9 @@
+<div class="title">
+    <h2>favorite Author List</h2>
+  </div>
+
+<div  *ngFor="let author of favoriteArray" >
+    <div class="container">
+    <div ><app-list-item [item]="author"  (removeFavoriteEvent)="removeFavorite($event)"></app-list-item></div>
+</div>
+    </div>

@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-content>
+<label><b>Name : </b></label>{{item?.name}} <br>
+<label><b>Bio :</b></label>{{item?.bio}} <br>
+<label ><b>LInk :</b></label><a href="{{item?.link}}" target="_blank" class="link">{{item?.link}}</a>
+
+    </mat-card-content>
+    <mat-card-actions *ngIf="item">
+        <button mat-raised-button mat-button *ngIf="!favoriteIdArray?.includes(item?._id)==true " (click)="addFavorite(item)">Add Favorite</button>
+        <button  mat-raised-button *ngIf="favoriteIdArray?.includes(item?._id)==true" (click)="removeFavorite(item)">Remove Favorite</button>
+      </mat-card-actions>
+</mat-card>
+

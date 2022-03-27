@@ -1,0 +1,36 @@
+<div class="title">
+  <h2>Author List</h2>
+</div>
+
+<div  *ngFor="let author of authorList?.results" >
+  <div class="container">
+<div ><app-list-item [item]="author"></app-list-item></div>
+</div>
+</div>
+
+<div class="middle">
+    <ul *ngIf="this.pager.pages && this.pager.pages.length" class="pagination">
+  
+      <li [ngClass]="{disabled:pager.currentPage === 1}" class="pagination">
+        <a (click)="getAuthorList(this.pager.currentPage - 1)">&laquo;</a>
+      </li>
+  
+      <li *ngFor="let page of pager.pages" [ngClass]="{'active':pager.currentPage === page}" class="pagination">
+        <a (click)="getAuthorList(page)">{{page}}</a>
+      </li>
+  
+      <li [ngClass]="{disabled:pager.currentPage === 2}" class="pagination">
+        <a (click)="getAuthorList(this.pager.currentPage + 1)">&raquo;</a>
+      </li>
+    </ul>
+  </div>
+  
+  <mat-card *ngIf="isLoading" style="display:flex; justify-content: center; align-items: center">
+    <mat-progress-spinner color="primary" mode="indeterminate">
+    </mat-progress-spinner>
+  </mat-card>
+  
+  <mat-card  *ngIf="authorList==''">
+    No Records Found!
+    </mat-card>
+
