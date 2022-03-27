@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PaginationService } from 'src/app/shared/services/pagination.service';
+import { Author } from '../../models/author';
 import { AuthorService } from '../../services/author.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class AuthorComponent implements OnInit, OnDestroy {
  limit:number=10;
  skip:number=0;
   pageSize:number=10
-  authorList:any;
+  authorList:any=[];
   isLoading :boolean = true;
   currentPage :number = 1;
   pager: any = [];
@@ -36,17 +37,6 @@ export class AuthorComponent implements OnInit, OnDestroy {
     })
   }
 
-  // getAuthorByPage(p:any){
-  //   var b=10*p
-  //   var params={limit:10,skip:b}
-  //   this.authorService.getAllAuthor(params).subscribe(response=>{
-  //     console.table(response);
-  //     this.authorList=response;
-  //     this.record = this.authorList.totalCount;
-  //     this.pager = this.paginationService.paginate(this.record, p);
-  //     this.isLoading = false;
-  //   })
-  // }
 
   ngOnDestroy(): void {
       this.subscription.unsubscribe();
