@@ -13,7 +13,7 @@ export class AuthorComponent implements OnInit, OnDestroy {
   limit:number=10;
   skip:number=0;
   pageSize:number=10
-  authorList:any=[];
+  authorList!:Author;
   isLoading :boolean = true;
   currentPage :number = 1;
   pager: any = [];
@@ -26,7 +26,7 @@ export class AuthorComponent implements OnInit, OnDestroy {
     this.getAuthorList(this.currentPage);
   }
 
-  getAuthorList(page:number) : void{
+ public getAuthorList(page:number) : void{
     this.skip=this.limit*(page-1)
     var params={limit:this.limit,skip:this.skip}
     this.subscription=this.authorService.getAllAuthor(params).subscribe(response=>{

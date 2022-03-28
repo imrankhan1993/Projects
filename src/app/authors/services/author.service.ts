@@ -11,7 +11,7 @@ export class AuthorService {
   constructor(private https: HttpClient) { }
   private url = 'http://api.quotable.io';
 
-  getAllAuthor(data:{limit:number,skip:number}): Observable<Author[]> {
-    return this.https.get<Author[]>(this.url + '/authors' , { params:data});
+  getAllAuthor(data:{limit:number,skip:number}): Observable<Author> {
+    return this.https.get<Author>(this.url + '/authors' , { params:data});
   }
 }

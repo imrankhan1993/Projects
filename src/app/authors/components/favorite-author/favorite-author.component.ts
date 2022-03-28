@@ -15,7 +15,7 @@ export class FavoriteAuthorComponent implements OnInit {
     this.favoriteArray = JSON.parse(localStorage.getItem('favoriteData')!);
   }
 
-  removeFavorite(e:string) :void{
+ public removeFavorite(e:string) :void{
     this.favoriteArray = this.favoriteArray.filter(item => item._id !== e);
   }
 
