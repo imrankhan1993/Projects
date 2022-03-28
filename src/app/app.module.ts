@@ -24,7 +24,7 @@ import { HashLocationStrategy, LocationStrategy,PathLocationStrategy } from '@an
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

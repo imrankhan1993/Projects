@@ -1,5 +1,5 @@
 
-import { Results } from "./results";
+import { Results } from "./results.model";
 
 export interface Author {
   count: number;

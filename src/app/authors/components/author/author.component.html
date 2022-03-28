@@ -8,7 +8,7 @@
 </div>
 </div>
 
-<div class="middle">
+<div class="alignment">
     <ul *ngIf="this.pager.pages && this.pager.pages.length" class="pagination">
   
       <li [ngClass]="{disabled:pager.currentPage === 1}" class="pagination">
@@ -30,7 +30,5 @@
     </mat-progress-spinner>
   </mat-card>
   
-  <mat-card  *ngIf="authorList==''">
-    No Records Found!
-    </mat-card>
+  
 

@@ -2,15 +2,15 @@
   width: 100%;
   height: 100%;
 }
-  // .mat-nav-list.button {
-  //      background-color: #c5b41b !important;
-  //     //color:blue ;
-  //     &:active{
-  //       color: #27cc18 !important;
-  //       //background-color: rgb(230, 63, 63) !important;
-  //     }
+  .mat-nav-list.button {
+       //background-color: #c5b41b !important;
+      //color:blue ;
+      &:active{
+        color: #27cc18 !important;
+        //background-color: rgb(230, 63, 63) !important;
+      }
       
-  //   } 
+    } 
     
    
     mat-sidenav-container {

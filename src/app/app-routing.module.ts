@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 const routes: Routes = [
-  { path: '**', redirectTo: '/authors', pathMatch: 'full' },
+  { path: '', redirectTo: '/authors', pathMatch: 'full' },
   {
   
   path: '',

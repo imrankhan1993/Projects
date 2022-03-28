@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PaginationService } from 'src/app/shared/services/pagination.service';
-import { Author } from '../../models/author';
+import { Author } from '../../models/author.model';
 import { AuthorService } from '../../services/author.service';
 
 @Component({
@@ -10,8 +10,8 @@ import { AuthorService } from '../../services/author.service';
   styleUrls: ['./author.component.scss']
 })
 export class AuthorComponent implements OnInit, OnDestroy {
- limit:number=10;
- skip:number=0;
+  limit:number=10;
+  skip:number=0;
   pageSize:number=10
   authorList:any=[];
   isLoading :boolean = true;

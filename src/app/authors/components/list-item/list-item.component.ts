@@ -10,7 +10,6 @@ import { AuthorService } from '../../services/author.service';
 export class ListItemComponent implements OnInit {
   favoriteArray:any[]=[]
   favoriteIdArray:any[]=[]
-  data:any
   constructor(private authorService:AuthorService,
               private paginationService:PaginationService) { }
 
@@ -22,7 +21,7 @@ export class ListItemComponent implements OnInit {
     this.checkFavoriteAuthor();
   }
 
-  checkFavoriteAuthor(){
+  checkFavoriteAuthor() : void{
     this.favoriteIdArray = JSON.parse(localStorage.getItem('favoriteData')!);
     if(this.favoriteIdArray){
     this.favoriteIdArray.forEach(element=>{
@@ -32,7 +31,7 @@ export class ListItemComponent implements OnInit {
   }
 
   
-  addFavorite(e:any){
+  addFavorite(e:any) : void{
     if(JSON.parse(localStorage.getItem('favoriteData')!)){
       this.favoriteArray = JSON.parse(localStorage.getItem('favoriteData')!);
     }
@@ -41,7 +40,7 @@ export class ListItemComponent implements OnInit {
     this.checkFavoriteAuthor();
   }
 
-  removeFavorite(e:any){
+  removeFavorite(e:any) : void {
     if(JSON.parse(localStorage.getItem('favoriteData')!)){
       this.favoriteArray = JSON.parse(localStorage.getItem('favoriteData')!);
       this.favoriteArray = this.favoriteArray.filter(item => item._id !== e._id);
