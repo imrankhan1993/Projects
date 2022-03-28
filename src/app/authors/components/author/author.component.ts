@@ -10,14 +10,14 @@ import { AuthorService } from '../../services/author.service';
   styleUrls: ['./author.component.scss']
 })
 export class AuthorComponent implements OnInit, OnDestroy {
-  limit:number=10;
-  skip:number=0;
-  pageSize:number=10
-  authorList!:Author;
+  public limit:number=10;
+  public skip:number=0;
+  public pageSize:number=10
+  public authorList!:Author;
   isLoading :boolean = true;
-  currentPage :number = 1;
-  pager: any = [];
-  record: any = [];
+  public currentPage :number = 1;
+  public pager: any = [];
+  public record: any = [];
   subscription!:Subscription
   constructor(private authorService:AuthorService,
     private paginationService:PaginationService) { }

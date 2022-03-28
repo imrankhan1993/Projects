@@ -8,7 +8,7 @@ import { Author } from '../../models/author.model';
   styleUrls: ['./favorite-author.component.scss']
 })
 export class FavoriteAuthorComponent implements OnInit {
-  favoriteArray :any[]=[]
+  public favoriteArray :any[]=[]
   constructor() { }
 
   ngOnInit(): void {

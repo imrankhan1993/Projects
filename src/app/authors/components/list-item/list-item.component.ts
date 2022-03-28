@@ -9,8 +9,8 @@ import { Author } from '../../models/author.model';
   styleUrls: ['./list-item.component.scss']
 })
 export class ListItemComponent implements OnInit {
-  favoriteArray:any[]=[]
-  favoriteIdArray:any[]=[]
+  public favoriteArray:any[]=[]
+  public favoriteIdArray:any[]=[]
   constructor(private authorService:AuthorService,
               private paginationService:PaginationService) { }
 
