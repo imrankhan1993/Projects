@@ -2,7 +2,7 @@
   <h2>Author List</h2>
 </div>
 
-<div  *ngFor="let author of authorList?.results" >
+<div  *ngFor="let author of authorList?.results;trackBy: trackByFn;" >
   <div class="container">
 <div ><app-list-item [item]="author"></app-list-item></div>
 </div>
