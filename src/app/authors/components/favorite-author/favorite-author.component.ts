@@ -19,4 +19,8 @@ export class FavoriteAuthorComponent implements OnInit {
     this.favoriteArray = this.favoriteArray.filter(item => item._id !== e);
   }
 
+  trackByFn(index: number, author: Results) {
+    return author._id
+  }
+
 }
