@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Author } from '../../models/author.model';
+import { Results } from '../../models/results.model';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Author } from '../../models/author.model';
   styleUrls: ['./favorite-author.component.scss']
 })
 export class FavoriteAuthorComponent implements OnInit {
-  public favoriteArray :any[]=[]
+  public favoriteArray :Results[]=[]
   constructor() { }
 
   ngOnInit(): void {

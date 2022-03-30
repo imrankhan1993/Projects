@@ -1,7 +1,7 @@
 import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
 import { PaginationService } from 'src/app/shared/services/pagination.service';
 import { AuthorService } from '../../services/author.service';
-import { Author } from '../../models/author.model';
+import { Results } from '../../models/results.model';
 
 @Component({
   selector: 'app-list-item',
@@ -9,7 +9,7 @@ import { Author } from '../../models/author.model';
   styleUrls: ['./list-item.component.scss']
 })
 export class ListItemComponent implements OnInit {
-  public favoriteArray:any[]=[]
+  public favoriteArray:Results[]=[]
   public favoriteIdArray:any[]=[]
   constructor(private authorService:AuthorService,
               private paginationService:PaginationService) { }
